@@ -36,6 +36,8 @@
             countryDataBindingSource = new BindingSource(components);
             button1 = new Button();
             buttonDelete = new Button();
+            buttonEdit = new Button();
+            button2 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)countryDataBindingSource).BeginInit();
             SuspendLayout();
@@ -95,11 +97,33 @@
             buttonDelete.UseVisualStyleBackColor = true;
             buttonDelete.Click += buttonDelete_Click;
             // 
+            // buttonEdit
+            // 
+            buttonEdit.Location = new Point(529, 191);
+            buttonEdit.Name = "buttonEdit";
+            buttonEdit.Size = new Size(75, 23);
+            buttonEdit.TabIndex = 3;
+            buttonEdit.Text = "Edit";
+            buttonEdit.UseVisualStyleBackColor = true;
+            buttonEdit.Click += buttonEdit_Click;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(529, 254);
+            button2.Name = "button2";
+            button2.Size = new Size(75, 23);
+            button2.TabIndex = 4;
+            button2.Text = "Mentés";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button2);
+            Controls.Add(buttonEdit);
             Controls.Add(buttonDelete);
             Controls.Add(button1);
             Controls.Add(dataGridView1);
@@ -120,5 +144,7 @@
         private DataGridViewTextBoxColumn areaInSquareKmDataGridViewTextBoxColumn;
         private BindingSource countryDataBindingSource;
         private Button buttonDelete;
+        private Button buttonEdit;
+        private Button button2;
     }
 }

@@ -40,5 +40,25 @@ namespace adatkotes
         {
             countryDataBindingSource.RemoveCurrent();
         }
+
+        private void buttonEdit_Click(object sender, EventArgs e)
+        {
+            FormCountryEdit fce = new FormCountryEdit();
+            fce.CountryData = countryDataBindingSource.Current as CountryData;
+            fce.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            using (var writer = new StreamWriter("countries.csv"))
+            using (var csv = new CsvWriter(writer, CultureInfo.InvariantCulture))
+            {
+                // Write records to the CSV file
+                csv.WriteRecords(countryList);
+            };
+
+
+        }
     }
 }
