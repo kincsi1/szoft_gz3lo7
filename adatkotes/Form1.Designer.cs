@@ -28,12 +28,97 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            components = new System.ComponentModel.Container();
+            dataGridView1 = new DataGridView();
+            nameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            populationDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            areaInSquareKmDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            countryDataBindingSource = new BindingSource(components);
+            button1 = new Button();
+            buttonDelete = new Button();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)countryDataBindingSource).BeginInit();
+            SuspendLayout();
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.AutoGenerateColumns = false;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { nameDataGridViewTextBoxColumn, populationDataGridViewTextBoxColumn, areaInSquareKmDataGridViewTextBoxColumn });
+            dataGridView1.DataSource = countryDataBindingSource;
+            dataGridView1.Location = new Point(26, 41);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowTemplate.Height = 25;
+            dataGridView1.Size = new Size(332, 312);
+            dataGridView1.TabIndex = 0;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            // 
+            // populationDataGridViewTextBoxColumn
+            // 
+            populationDataGridViewTextBoxColumn.DataPropertyName = "Population";
+            populationDataGridViewTextBoxColumn.HeaderText = "Population";
+            populationDataGridViewTextBoxColumn.Name = "populationDataGridViewTextBoxColumn";
+            // 
+            // areaInSquareKmDataGridViewTextBoxColumn
+            // 
+            areaInSquareKmDataGridViewTextBoxColumn.DataPropertyName = "AreaInSquareKm";
+            areaInSquareKmDataGridViewTextBoxColumn.HeaderText = "AreaInSquareKm";
+            areaInSquareKmDataGridViewTextBoxColumn.Name = "areaInSquareKmDataGridViewTextBoxColumn";
+            // 
+            // countryDataBindingSource
+            // 
+            countryDataBindingSource.DataSource = typeof(CountryData);
+            // 
+            // button1
+            // 
+            button1.Location = new Point(529, 28);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 23);
+            button1.TabIndex = 1;
+            button1.Text = "Megnyitás";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // buttonDelete
+            // 
+            buttonDelete.Location = new Point(529, 111);
+            buttonDelete.Name = "buttonDelete";
+            buttonDelete.Size = new Size(75, 23);
+            buttonDelete.TabIndex = 2;
+            buttonDelete.Text = "Delete";
+            buttonDelete.UseVisualStyleBackColor = true;
+            buttonDelete.Click += buttonDelete_Click;
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(buttonDelete);
+            Controls.Add(button1);
+            Controls.Add(dataGridView1);
+            Name = "Form1";
+            Text = "Form1";
+            Load += Form1_Load;
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)countryDataBindingSource).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private DataGridView dataGridView1;
+        private Button button1;
+        private DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn populationDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn areaInSquareKmDataGridViewTextBoxColumn;
+        private BindingSource countryDataBindingSource;
+        private Button buttonDelete;
     }
 }

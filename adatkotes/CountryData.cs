@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace adatkotes
 {
-    internal class CountryData
+    public class CountryData
     {
+        public string Name { get; set; } = string.Empty;
+        public long Population { get; set; }
+        public double AreaInSquareKm { get; set; }
     }
 }
