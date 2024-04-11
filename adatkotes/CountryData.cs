@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace kigyoss
+namespace adatkotes
 {
-    internal class Alma: PictureBox
+    internal class CountryData
     {
-        public Alma() { Width = 20; Height = 20; BackColor = Color.Black;}
     }
 }

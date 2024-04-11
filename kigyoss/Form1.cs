@@ -49,14 +49,19 @@ namespace kigyoss
 
 
             Alma a = new Alma();
-            a.Top = 100;
-            a.Left = 100;
+            
             Controls.Add(a);
+
+            Mereg m = new Mereg();
+            Random r = new Random();
+
 
             if (a.Top==fej_y&& a.Left==fej_x)
             {
                 hossz++;
 
+                a.Top = ((r.Next(0,489))/KigyóElem.Méret)*KigyóElem.Méret;
+                a.Left = r.Next(0, 489);
             }
 
             if (count % 2 == 0) ke.BackColor = Color.Yellow;
